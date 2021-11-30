@@ -1,0 +1,29 @@
+
+% configurando metadados do pdf -----------------------------------------------
+% tonalidade do azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+  %pagebackref=true,
+	pdftitle       = {\@title}, 
+	pdfauthor      = {\@author},
+  pdfsubject     = {\imprimirpreambulo},
+	pdfcreator     = {arara com LuaLaTeX},
+	pdfkeywords    = {abnt}{latex}{abntex2}{biblatex}{ufrb}{cpf}{modelo tcc}, 
+	colorlinks     = true,
+  linkcolor      = blue,
+  citecolor      = blue,
+  filecolor      = red,
+	urlcolor       = blue,
+	bookmarksdepth = 4
+}
+\makeatother
+
+% configurando espaçamentos ---------------------------------------------------
+% sangria do parágrafo
+\setlength{\parindent}{1.3cm}
+
+%espaçamento entre linhas
+\setlength{\parskip}{0.2cm}

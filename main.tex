@@ -1,0 +1,57 @@
+% arara: lualatex: {options: ['--output-directory=docs_saida']}
+% arara: biber: {options: ['--output-directory=docs_saida']}
+% arara: lualatex: {options: ['--output-directory=docs_saida'], synctex: yes}
+
+\documentclass
+[
+  12pt,      %--------------------------------------> tamanho da fonte do texto
+  openright, %-------------------------> capítulo sempre começa em página ímpar
+  twoside,   %--------------> configura a margem para imprimir "frente e verso"
+  a4paper,   %-----------------------------------------------> tamanho do papel
+  brazil     %------------------------------------> linguage principal do texto
+]{cls/tccUFRB}
+
+% incluindo pacotes -----------------------------------------------------------
+\include{tex/config-TCC/01_pacotesTCC.tex}
+
+% informações do TCC ----------------------------------------------------------
+\include{tex/config-TCC/02_informaTCC.tex}
+
+% configurações do TCC --------------------------------------------------------
+\include{tex/config-TCC/03_configsTCC.tex}
+
+%==============================================================================
+% Início do Documento
+%------------------------------------------------------------------------------
+
+\begin{document}
+% inserindo elementos pré-textuais --------------------------------------------
+  \include{tex/config-TCC/pretextual.tex}
+
+% inserindo elementos textuais ------------------------------------------------
+  \textual 
+
+% introdução 
+  \include{tex/texto-TCC/00_intro.tex}
+
+% capítulos 
+  \part{Fundamentação Teórica}
+    \include{tex/texto-TCC/01_cap_nome-breve.tex}
+  \part{Resultados da Pesquisa}
+  \part{Análise dos Dados}
+
+% conclusão
+  \phantompart
+% 
+  \include{tex/texto-TCC/conclusao.tex}
+
+% inserindo elementos pós-textuais --------------------------------------------
+  \postextual
+
+% bibliografia
+  \nocite{*}
+  \printbibliography
+
+%------------------------------------------------------------------------------
+\end{document}
+%==============================================================================
