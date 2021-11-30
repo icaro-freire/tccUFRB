@@ -1,3 +1,6 @@
+%==============================================================================
+% Configurações Gerais do TCC
+%------------------------------------------------------------------------------
 
 % configurando metadados do pdf -----------------------------------------------
 % tonalidade do azul
@@ -21,9 +24,40 @@
 }
 \makeatother
 
+% configurações de figuras e tabelas ------------------------------------------
+% 																				"Posiciona figuras e tabelas no topo 
+% 																				da página quando adicionadas sozinhas
+% 																				em um página em branco." (abnTeX2)
+\makeatletter
+  \setlength{\@fptop}{5pt}
+\makeatother
+
+% criação de quadros e lista de quadros ---------------------------------------
+% 																						"Possibilita criação de Quadros e 
+% 																						Lista de quadros." (abnTeX2)
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% ajustes para ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp}
+
 % configurando espaçamentos ---------------------------------------------------
 % sangria do parágrafo
 \setlength{\parindent}{1.3cm}
 
 %espaçamento entre linhas
 \setlength{\parskip}{0.2cm}
+
+% criação do índice -----------------------------------------------------------
+\makeindex
+
+%==============================================================================

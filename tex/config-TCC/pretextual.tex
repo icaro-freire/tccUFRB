@@ -1,13 +1,109 @@
-% configurações para língua e espaços em branco -------------------------------
-
-% selecionando a língua padrão do texto
-\selectlanguage{brazil}
-
-% eleminando espaçoes em brancos excessivos
-\frenchspacing
+%==============================================================================
+% Elementos Pré-Textuais do TCC 
+%------------------------------------------------------------------------------
 
 % comando para mostrar a capa -------------------------------------------------
 \imprimircapa
+
+% inserindo folha de rosto ----------------------------------------------------
+\imprimirfolhaderosto*
+
+% ficha catalográfica ---------------------------------------------------------
+% ############################ ATENÇÃO! #######################################
+% Retire o comentário do código abaixo para inserir o PDF da ficha em questão.
+% Depois APAGUE o código que se encontra da linha 22 até a 52
+% 
+%\begin{fichacatalografica}
+%  \includepdf{fig_ficha_catalografica.pdf}
+%\end{fichacatalografica}
+%
+%##############################################################################
+
+\begin{fichacatalografica}
+	\sffamily
+	\vspace*{\fill}					% Posição vertical
+	\begin{center}					% Minipage Centralizado
+	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+	\small
+	\imprimirautor
+	%Sobrenome, Nome do autor
+	
+	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+	\imprimirlocal, \imprimirdata-
+	
+	\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.\\
+	
+	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	
+	\hspace{0.5cm}
+	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+	\imprimirdata.}\\
+	
+	\hspace{0.5cm}
+		1. Palavra-chave1.
+		2. Palavra-chave2.
+		2. Palavra-chave3.
+		I. Orientador.
+		II. Universidade Federal do Recôncavo da Bahia.
+		III. Centro de Formação de Professores.
+		IV. Título 			
+	\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
+%##############################################################################
+
+% caso queira inserir alguma errata -------------------------------------------
+%
+% \begin{errata}
+%   Colocar aqui o conteúdo da errata
+% \end{errata}
+
+% folha de aprovação ----------------------------------------------------------
+% ############################ ATENÇÃO! #######################################
+% Retire o comentário do código abaixo para inserir o PDF da folha de aprovação.
+% Depois APAGUE o código que se encontra da linha 71 até a 105
+% 
+% \begin{folhadeaprovacao}
+%   \includepdf{folhadeaprovacao_final.pdf}
+% \end{folhadeaprovacao}
+%
+%##############################################################################
+\begin{folhadeaprovacao}
+
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+        
+   Trabalho aprovado. \imprimirlocal, xx de xxxxxxxxx de 202x:
+
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{Professor} \\ Convidado 1}
+   \assinatura{\textbf{Professor} \\ Convidado 2}
+   %\assinatura{\textbf{Professor} \\ Convidado 3}
+   %\assinatura{\textbf{Professor} \\ Convidado 4}
+      
+   \begin{center}
+    \vspace*{0.5cm}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+  
+\end{folhadeaprovacao}
+%##############################################################################
 
 % resumos ---------------------------------------------------------------------
 
@@ -44,3 +140,5 @@
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
+
+%==============================================================================
