@@ -105,6 +105,42 @@
 \end{folhadeaprovacao}
 %##############################################################################
 
+% dedicatória -----------------------------------------------------------------
+\begin{dedicatoria}
+  \vspace*{\fill}
+  \centering
+  \noindent
+  \textit
+  { 
+    Este trabalho é dedicado a \\
+    Thamyres, amada esposa; \\
+    Asaph e Sophia, amados filhos.
+  } 
+  \vspace*{\fill}
+\end{dedicatoria}
+
+% agradecimentos %-------------------------------------------------------------
+
+\begin{agradecimentos}
+  \lipsum[1-3]    
+\end{agradecimentos}
+
+% epígrafe --------------------------------------------------------------------
+
+\begin{epigrafe}
+  \vspace*{\fill}
+  \begin{flushright}
+    \textit
+    {
+      ``Não vos amoldeis às estruturas deste mundo, \\
+      mas transformai-vos pela renovação da mente, \\
+      a fim de distinguir qual é a vontade de Deus: \\
+      o que é bom, o que Lhe é agradável, o que é perfeito.''\\
+      (Bíblia Sagrada, Romanos 12, 2)
+    }
+  \end{flushright}
+\end{epigrafe}
+
 % resumos ---------------------------------------------------------------------
 
 % resumo em português
@@ -135,6 +171,43 @@
  \end{otherlanguage*}
 \end{resumo}
 
+
+% inserindo lista de ilustrações ----------------------------------------------
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% inserindo lista de quadros --------------------------------------------------
+
+\pdfbookmark[0]{\listofquadrosname}{loq}
+\listofquadros*
+\cleardoublepage
+
+% inserindo lista de tabelas --------------------------------------------------
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% inserindo lista de abreviaturas e siglas ------------------------------------
+
+\begin{siglas}
+  \item[ABNT] Associação Brasileira de Normas Técnicas
+  \item[abnTeX] ABsurdas Normas para TeX
+  \item[CFP] Centro de Formação de Professores
+  \item[UFRB] Universidade Federal do Recôncavo da Bahia
+\end{siglas}
+
+% inserin lista de símbolos ---------------------------------------------------
+
+\begin{simbolos}
+  \item[$ \mathbb{R} $] Conjunto dos Números Reais
+  \item[$ \mathbb{C} $] Conjunto dos Números Complexos
+  \item[$ \mathrm{Re}(z) $] Parte Real do complexo $ z $
+  \item[$ \mathrm{sen} (x) $] Seno de $ x $ 
+\end{simbolos}
+% ---
 
 % inserindo o sumário ---------------------------------------------------------
 \pdfbookmark[0]{\contentsname}{toc}

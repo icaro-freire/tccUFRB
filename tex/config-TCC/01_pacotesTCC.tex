@@ -1,19 +1,19 @@
-\usepackage{eulervm}
-\usepackage{Alegreya, AlegreyaSans}
-\usepackage{fontspec}
+\usepackage{eulervm} %----------------------------------> bela fonte matemática
+\usepackage{Alegreya, AlegreyaSans} %----> belas fontes com Serifa e Sem Serifa
+\usepackage{fontspec} %----------------------------> seleciona fonte específica
   \setmonofont{UbuntuMono}
   [
     Path          = fonts/,
     Extension     = .ttf,
     UprightFont   = *-Regular
   ]
-\usepackage{indentfirst}	% Indenta o primeiro parágrafo de cada seção.
-\usepackage{color}				% Controle das cores
-\usepackage{graphicx}			% Inclusão de gráficos
-\usepackage{graphicx}
-  \graphicspath{{./figs/}}
-\usepackage{microtype}
-\usepackage{lipsum}
-\usepackage{hyperref}
-\usepackage[style=abnt]{biblatex}
-  \addbibresource{bib/biblatex-abnt.bib}
+\usepackage{amsmath, amssymb, amsthm} %--------------> escrita matemática (AMS)
+\usepackage{indentfirst} %---------> indenta o primeiro parágrafo de cada seção
+\usepackage{xcolor} %---->-------------------------------- modificação de cores
+\usepackage{graphicx} %----------------------------------> inclusão de gráficos
+  \graphicspath{{./figs/}} %-----------------------------> caminho para figuras
+\usepackage{microtype} %-----------------> melhora os espaços entre as palavras
+\usepackage{lipsum} %--------------------------> texto para testes tipográficos
+\usepackage{hyperref} %---------------------------> para hiperlinks e metadados
+\usepackage[style=abnt]{biblatex} %-------------------------> para bibliografia
+  \addbibresource{bib/biblatex-abnt.bib} %-> adiciona o arquivo da bibliografia

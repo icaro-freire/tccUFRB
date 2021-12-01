@@ -1,5 +1,6 @@
 % arara: lualatex: {options: ['--output-directory=docs_saida']}
-% arara: biber: {options: ['--output-directory=docs_saida']}
+% arara: biber:    {options: ['--output-directory=docs_saida']}
+% arara: lualatex: {options: ['--output-directory=docs_saida']}
 % arara: lualatex: {options: ['--output-directory=docs_saida'], synctex: yes}
 
 \documentclass
@@ -11,14 +12,10 @@
   brazil     %------------------------------------> linguage principal do texto
 ]{cls/tccUFRB}
 
-% incluindo pacotes -----------------------------------------------------------
-\include{tex/config-TCC/01_pacotesTCC.tex}
-
-% informações do TCC ----------------------------------------------------------
-\include{tex/config-TCC/02_informaTCC.tex}
-
-% configurações do TCC --------------------------------------------------------
-\include{tex/config-TCC/03_configsTCC.tex}
+% pacotes, informações e configurações do TCC ---------------------------------
+\input{tex/config-TCC/01_pacotesTCC.tex} %----------------> incluindo pacotes
+\input{tex/config-TCC/02_informaTCC.tex} %---------------> informações do TCC
+\input{tex/config-TCC/03_configsTCC.tex} %-------------> configurações do TCC
 
 %==============================================================================
 % Início do Documento
@@ -30,32 +27,41 @@
   \frenchspacing %------------------> elimina espaços em brancos inconvenientes 
 %
 % inserindo elementos pré-textuais --------------------------------------------
-  \include{tex/config-TCC/pretextual.tex}
-
+%  
+  \input{tex/config-TCC/pretextual.tex} %--> capa, folha de rosto, resumo ...
+%
 % inserindo elementos textuais ------------------------------------------------
+%  
   \textual 
-
-% introdução 
-  \include{tex/texto-TCC/00_intro.tex}
-
-% capítulos 
+% 
+  \include{tex/texto-TCC/00_intro.tex} %------------------------>  introdução
+%
   \part{Fundamentação Teórica}
-    \include{tex/texto-TCC/01_cap_nome-breve.tex}
+%
+  \include{tex/texto-TCC/01_cap_nome-breve.tex} %---------------> capítulo 01
+  \include{tex/texto-TCC/02_cap_nome-breve.tex} %---------------> capítulo 02
+%
   \part{Resultados da Pesquisa}
-  \part{Análise dos Dados}
-
-% conclusão
+%
+  \include{tex/texto-TCC/03_cap_nome-breve.tex} %---------------> capítulo 03
+% 
   \phantompart
 % 
-  \include{tex/texto-TCC/conclusao.tex}
-
+  \include{tex/texto-TCC/conclusao.tex} %-------------------------> conclusão
+%
 % inserindo elementos pós-textuais --------------------------------------------
+% 
   \postextual
-
+%
 % bibliografia
-  \nocite{*}
-  \printbibliography
-
+  \nocite{*} %------------------------> mostra referências usadas indiretamente
+  \printbibliography %---------------------------------> imprime a bibliografia
+%
+% apêndices
+  \input{tex/texto-TCC/apendices.tex}
+%
+% anexos
+  \input{tex/texto-TCC/anexos.tex} 
 %------------------------------------------------------------------------------
 \end{document}
 %==============================================================================
