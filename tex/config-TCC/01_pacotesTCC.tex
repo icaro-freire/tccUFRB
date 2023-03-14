@@ -1,19 +1,25 @@
-\usepackage{eulervm} %----------------------------------> bela fonte matemática
-\usepackage{Alegreya, AlegreyaSans} %----> belas fontes com Serifa e Sem Serifa
-\usepackage{fontspec} %----------------------------> seleciona fonte específica
-  \setmonofont{UbuntuMono}
-  [
-    Path          = fonts/,
-    Extension     = .ttf,
-    UprightFont   = *-Regular
-  ]
+% pacotes utilizados =========================================================
+
+% fontes & cia
+\usepackage{euler} %------------------------------------> bela fonte matemática
+\usepackage{fontspec} %-----------------------> codificação e escolha de fontes
+\usepackage{libertine} %----------------> família de fontes (serif, sans, mono)
+
+% matemática
 \usepackage{amsmath, amssymb, amsthm} %--------------> escrita matemática (AMS)
-\usepackage{indentfirst} %---------> indenta o primeiro parágrafo de cada seção
+\usepackage{mathtools} %---------------------------------> melhorias no amsmath
+
+% cores
 \usepackage{xcolor} %---->-------------------------------- modificação de cores
+
+% figuras e tabelas
 \usepackage{graphicx} %----------------------------------> inclusão de gráficos
   \graphicspath{{./figs/}} %-----------------------------> caminho para figuras
-\usepackage{microtype} %-----------------> melhora os espaços entre as palavras
+
+% metadados e testes
 \usepackage{lipsum} %--------------------------> texto para testes tipográficos
 \usepackage{hyperref} %---------------------------> para hiperlinks e metadados
-\usepackage[style=abnt]{biblatex} %-------------------------> para bibliografia
+
+% biblioigrafia/referências
+\usepackage[style=abnt, justify]{biblatex} %----------------> para bibliografia
   \addbibresource{bib/biblatex-abnt.bib} %-> adiciona o arquivo da bibliografia

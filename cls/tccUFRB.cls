@@ -1,5 +1,33 @@
+%==========================================================================%
+% tccUFRB.cls                                                              %
+% Copyright (c) 2023 Ícaro Vidal Freire.                                   %
+%--------------------------------------------------------------------------%
+% Versão     : v1.1.0                                                      %
+% Licença    : LPPL 1.3c (LaTeX Project Public License v1.3c) ou superior  %
+%              (fica a seu critério).                                      %
+%              Para mais informações, acesse:                              %
+%                 >>  https://www.latex-project.org/lppl/lppl-1-3c/  <<    %
+% Mantenedor : Ícaro Vidal Freire                                          %
+% Descrição  : Classe, em LaTeX2e, para confecção de Monografia do curso   %
+%              de Licenciatura em Matemática, do Centro de Formação de     %
+%              Professores, da Universidade Federal do Recôncavo da Bahia. %
+%              - A classe é extra-oficial                                  %
+% Como Usar  : A classe foi escrita em LaTeX2e para composição tipográfica %
+%              com o mecanismo LuaTeX. Portanto, deve-se usar o LuaLaTeX   %
+%              para execução.                                              %
+%--------------------------------------------------------------------------%
+%                      _         _____   __  __                            %
+%                     | |    __ |_   _|__\ \/ /                            %
+%                     | |   / _` || |/ _ \\  /                             %
+%                     | |__| (_| || |  __//  \                             %
+%                     |_____\__,_||_|\___/_/\_\                            %
+%==========================================================================%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% informações internas ========================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tccUFRB}[2021/11/30 v1.0 Modelo de Monografia do CFP/UFRB]
+\ProvidesClass{tccUFRB}[2023/03/13 v1.1.0 Modelo de Monografia do CFP/UFRB]
 
 % passando os parâmetros da classe abntex2 ------------------------------------
 \DeclareOption*{%
@@ -8,7 +36,22 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-% modificações para classe tccUFRB --------------------------------------------
+% aviso de compilação 
+\RequirePackage{iftex}
+  \ifPDFTeX
+   \PackageError{tccUFRB.cls}{%
+     Precisa ser composto com LuaLaTeX}{Use LuaLaTeX}
+  \fi
+
+% pacotes essenciais ==========================================================
+% indentação
+\RequirePackage{indentfirst} %----> indenta o primeiro parágrafo de cada seção
+
+% protução/espaçamento das letras
+\RequirePackage{microtype} %-------------> melhora os espaços entre as palavras
+
+
+% modificações para classe tccUFRB ============================================
 
 % modificando a capa
 \renewcommand{\imprimircapa}{%

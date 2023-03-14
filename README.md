@@ -8,7 +8,7 @@
   Professores, da UFRB;
 - É baseada na classe [abnTeX2][ABN], com modificações pontuais; bem como 
   utilização do pacote [biblatex-abnt][BIB], em detrimento ao pacote `abntex2cite`.
-- Deve ser compilada com LuaLaTeX (ou XeLaTeX);
+- Deve ser compilada com LuaLaTeX;
   + Utilizei o [arara][ARARA] como ferramenta de compilação.
 
 [ABN]: https://github.com/abntex/abntex2
