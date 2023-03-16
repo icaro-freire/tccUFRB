@@ -44,12 +44,31 @@
   \fi
 
 % pacotes essenciais ==========================================================
+
+% fontes & cia
+\RequirePackage{euler} %--------------------------------> bela fonte matemática
+\RequirePackage{fontspec} %-------------------> codificação e escolha de fontes
+\RequirePackage{libertine} %------------> família de fontes (serif, sans, mono)
+
 % indentação
 \RequirePackage{indentfirst} %----> indenta o primeiro parágrafo de cada seção
 
 % protução/espaçamento das letras
 \RequirePackage{microtype} %-------------> melhora os espaços entre as palavras
 
+% matemática
+\usepackage{amsmath, amssymb, amsthm} %--------------> escrita matemática (AMS)
+\usepackage{mathtools} %---------------------------------> melhorias no amsmath
+
+% cores
+\usepackage{xcolor} %---->-------------------------------- modificação de cores
+
+% figuras e tabelas
+\usepackage{graphicx} %----------------------------------> inclusão de gráficos
+  \graphicspath{{./figs/}} %-----------------------------> caminho para figuras
+
+% biblioigrafia/referências
+\usepackage[style=abnt, justify]{biblatex} %----------------> para bibliografia
 
 % modificações para classe tccUFRB ============================================
 

@@ -2,6 +2,7 @@
 % arara: biber:    {options: ['--output-directory=docs_saida']}
 % arara: lualatex: {options: ['--output-directory=docs_saida'], synctex: yes}
 
+% classe do documento =========================================================
 \documentclass
 [
   12pt,      %--------------------------------------> tamanho da fonte do texto
@@ -15,6 +16,9 @@
 \input{tex/config-TCC/01_pacotesTCC.tex} %----------------> incluindo pacotes
 \input{tex/config-TCC/02_informaTCC.tex} %---------------> informações do TCC
 \input{tex/config-TCC/03_configsTCC.tex} %-------------> configurações do TCC
+
+% adicionando o arquivo da bibliografia (deve estar no diretório bib/) --------
+\addbibresource{bib/biblatex-abnt.bib} 
 
 %==============================================================================
 % Início do Documento
